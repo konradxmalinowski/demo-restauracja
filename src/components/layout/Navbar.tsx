@@ -70,7 +70,7 @@ export function Navbar() {
                         ? 'text-restauracja-burgundy dark:text-restauracja-gold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-restauracja-burgundy dark:after:bg-restauracja-gold'
                         : scrolled
                         ? 'text-restauracja-dark dark:text-restauracja-parchment'
-                        : 'text-restauracja-dark/90 dark:text-restauracja-parchment/90'
+                        : 'text-white/90'
                     }`
                   }
                 >
