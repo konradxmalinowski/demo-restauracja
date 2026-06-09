@@ -5,13 +5,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        restaurant: {
+        restauracja: {
           parchment: '#FDFCF0',
+          cream: '#F5F0DC',
           burgundy: '#7C2D12',
-          gold: '#B7860B',
-          cream: '#F9F5E7',
-          dark: '#1A0A00',
-          charcoal: '#2C2C2C',
+          wine: '#991B1B',
+          dark: '#1C1510',
+          gold: '#B8860B',
         },
       },
     },
