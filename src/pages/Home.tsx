@@ -178,14 +178,14 @@ export default function Home() {
               'url(https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600)',
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/60 to-black/70" />
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <motion.p
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-restauracja-cream/80 uppercase tracking-[0.3em] text-xs mb-6"
+            className="text-restauracja-parchment uppercase tracking-[0.3em] text-xs mb-6"
           >
             Fine Dining · Warszawa
           </motion.p>
