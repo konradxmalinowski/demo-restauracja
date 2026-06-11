@@ -1,0 +1,30 @@
+# Demo: Restaurant (Restauracja)
+
+> A demo website for a premium restaurant, built by freelance web developer Konrad
+> Malinowski as part of his portfolio. React 19 + TypeScript with TanStack Query —
+> a static frontend with simulated ordering and reservations that shows prospective
+> clients what their own restaurant website could look like.
+
+The site content is in Polish. All data (menu, events, reviews) is mock data; the
+cart, three-step checkout, and table reservations are simulated client-side with no
+backend.
+
+## Features
+
+- Menu with search and filters (vegetarian, gluten-free, bestsellers)
+- Table reservation with an interactive calendar
+- Cart and online ordering with a three-step checkout flow
+- Events calendar (tastings, concerts, themed dinners)
+- Dish gallery designed to make the food look good; fully responsive, mobile-first
+
+## Tech
+
+- React 19, TypeScript, Vite, React Router 7
+- TanStack Query 5 (server-state), Zustand (cart), React Hook Form + Zod (validation)
+- Framer Motion (animations), Tailwind CSS
+
+## Links
+
+- [Source code](https://github.com/konradxmalinowski/demo-restauracja): GitHub repository
+- [Developer portfolio](http://konrad.malinowski.ct8.pl): Konrad Malinowski — freelance web developer
+- [Contact](mailto:malinowski.konrad45@gmail.com): get a similar website for your business
