@@ -40,6 +40,11 @@ export function Navbar() {
   const pathSegments = location.pathname.replace(/^\//, '').split('/').filter(Boolean)
   const showBreadcrumbs = pathSegments.length > 0
 
+  // Only the home route has a dark hero behind the transparent navbar;
+  // everywhere else the page background is light parchment
+  const isHome = location.pathname === '/'
+  const overHero = !scrolled && isHome
+
   return (
     <>
       <header
@@ -52,7 +57,7 @@ export function Navbar() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <span className="text-restauracja-burgundy font-serif text-xl lg:text-2xl font-bold tracking-wide group-hover:opacity-80 transition-opacity">
+            <span className={`font-serif text-xl lg:text-2xl font-bold tracking-wide group-hover:opacity-80 transition-opacity ${overHero ? 'text-restauracja-parchment' : 'text-restauracja-burgundy dark:text-restauracja-gold'}`}>
               Złoty Talerz
             </span>
           </Link>
@@ -68,9 +73,9 @@ export function Navbar() {
                     `relative pb-0.5 font-medium transition-colors hover:text-restauracja-burgundy dark:hover:text-restauracja-gold ${
                       isActive
                         ? 'text-restauracja-burgundy dark:text-restauracja-gold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-restauracja-burgundy dark:after:bg-restauracja-gold'
-                        : scrolled
-                        ? 'text-restauracja-dark dark:text-restauracja-parchment'
-                        : 'text-white/90'
+                        : overHero
+                        ? 'text-white/90'
+                        : 'text-restauracja-dark dark:text-restauracja-parchment'
                     }`
                   }
                 >
@@ -86,7 +91,7 @@ export function Navbar() {
             <button
               onClick={toggleDarkMode}
               aria-label={darkMode ? 'Tryb jasny' : 'Tryb ciemny'}
-              className="p-2 rounded-full hover:bg-restauracja-burgundy/10 transition-colors text-restauracja-dark dark:text-restauracja-parchment"
+              className={`p-2 rounded-full hover:bg-restauracja-burgundy/10 transition-colors ${overHero ? 'text-restauracja-parchment' : 'text-restauracja-dark dark:text-restauracja-parchment'}`}
             >
               {darkMode ? <Sun size={18} /> : <Moon size={18} />}
             </button>
@@ -106,7 +111,7 @@ export function Navbar() {
             <button
               onClick={() => setMobileOpen((o) => !o)}
               aria-label="Menu mobilne"
-              className="lg:hidden p-2 rounded-full hover:bg-restauracja-burgundy/10 transition-colors text-restauracja-dark dark:text-restauracja-parchment"
+              className={`lg:hidden p-2 rounded-full hover:bg-restauracja-burgundy/10 transition-colors ${overHero ? 'text-restauracja-parchment' : 'text-restauracja-dark dark:text-restauracja-parchment'}`}
             >
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}
             </button>

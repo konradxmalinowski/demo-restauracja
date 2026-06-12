@@ -30,7 +30,7 @@ body {
 
 /* Organic Slow-Food typography */
 .font-serif {
-  font-family: 'Cormorant Garamond', 'Fraunces', 'Georgia', serif;
+  font-family: 'Playfair Display', 'Fraunces', 'Georgia', serif;
 }
 
 /* Scroll reveal animations */
@@ -69,6 +69,6 @@ body.overflow-hidden {
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-family: 'Playfair Display', 'Georgia', serif;
   }
 }
